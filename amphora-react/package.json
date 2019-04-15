@@ -1,0 +1,55 @@
+{
+  "name": "amphora-react",
+  "version": "4.1.0",
+  "description": "An HTML renderer for component data",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run eslint && npm run jest -- --coverage --no-cache",
+    "eslint": "eslint --max-warnings 0 lib test",
+    "jest": "jest"
+  },
+  "dependencies": {
+    "amphora-fs": "1.0.1",
+    "bluebird": "^3.5.0",
+    "clay-log": "^1.2.0",
+    "clayhandlebars": "^3.2.2",
+    "clayutils": "^2.0.3",
+    "glob": "^7.1.1",
+    "handlebars": "^4.0.6",
+    "js-yaml": "^3.8.2",
+    "lodash": "^4.17.5",
+    "nymag-fs": "^1.0.1",
+    "traverse": "^0.6.6"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^3.19.0",
+    "jest": "23.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nymag/amphora-react.git"
+  },
+  "jest": {
+    "clearMocks": true,
+    "restoreMocks": true,
+    "collectCoverageFrom": [
+      "<rootDir>/lib/**/*.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text-summary"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/setupFile.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(hbs)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "author": "Chris Pachomski",
+  "license": "MIT"
+}

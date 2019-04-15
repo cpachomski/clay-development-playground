@@ -1,0 +1,40 @@
+_description: |
+  A basic gallery component.
+
+_confirmRemoval: true
+
+# this is the headline that displays on the gallery itself
+headlineText:
+  _label: Headline
+  _has:
+    help: Headline for this gallery
+    input: text
+  validate:
+    required: true
+    max: 100
+    maxMessage: Headline must be 100 characters or ferew
+bylineText:
+  _label: Byline
+  _has:
+    help: Authors of this content
+    input: text
+bylineUrl:
+  _label: Byline URL
+  _has:
+    help: Url the byline will link to
+    input: text
+    type: url
+
+
+# form groups for this layout
+_groups:
+  headline:
+    fields:
+      - headlineText
+      - bylineText
+      - bylineUrl
+    _placeholder:
+      text: Headline
+      height: 100px
+      ifEmpty: headlineText
+
