@@ -77,6 +77,10 @@ function makeHtml(state) {
   };
 }
 
+// 1. Move this to setup
+// 2. get all components in memory on startup into a map for instant lookup during render
+// 3. get the template for the layout
+// 4. pass _data in makeHtml into an react app that can render valid react components recursively into the template
 function getValidReactComponents(data) {
   let validReactComponents = {};
   for (let k in data) {
